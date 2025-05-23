@@ -1,0 +1,7 @@
+install.packages("usethis")
+install.packages("rmarkdown") 
+usethis::use_vignette("schema-therapy-intake-shiny-app", 
+                      "Schema Therapy Intake Shiny App Report")
+
+
+

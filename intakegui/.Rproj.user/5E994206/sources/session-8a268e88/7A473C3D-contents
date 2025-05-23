@@ -1,0 +1,1 @@
+This project is a Shiny app designed for use in psychotherapy clinics. It provides a user-friendly platform where patients can complete intake questionnaires. Based on their responses, the app generates structured reports — including visual summaries — that are accessible to both patients and clinicians.
