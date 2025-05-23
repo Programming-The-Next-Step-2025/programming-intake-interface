@@ -1,0 +1,15 @@
+## ----include = FALSE----------------------------------------------------------
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+## ----setup--------------------------------------------------------------------
+library(intakegui)
+
+## ----eval=FALSE---------------------------------------------------------------
+#  mean(as.numeric(responses), na.rm = TRUE)
+
+## ----eval=FALSE---------------------------------------------------------------
+#  shiny::runApp(system.file("schema-intake-app", package = "intakegui"))
+

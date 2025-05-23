@@ -3,7 +3,7 @@ library(shinydashboard)
 library(shinyjs)
 library(rmarkdown)
 
-source("schemas_modes.R")
+source("private_schemas.R")
 
 ui <- dashboardPage(
   skin = "red",

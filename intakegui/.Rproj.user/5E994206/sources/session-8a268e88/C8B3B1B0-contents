@@ -3,7 +3,7 @@ library(shinydashboard)
 library(shinyjs)
 library(rmarkdown)
 
-source("schemas_modes.R")
+source("private_schemas.R")
 
 ui <- dashboardPage(
   skin = "red",
@@ -98,17 +98,17 @@ server <- function(input, output, session) {
   })
 
   observeEvent(input$tabs, {
-    if (input$tabs == "smi" && !ysq_completed()) {
+  if (input$tabs == "smi" && !ysq_completed()) {
       updateTabItems(session, "tabs", "ysq")
-      showModal(modalDialog("Please complete all YSQ questions before moving to the SMI section.",
+     showModal(modalDialog("Please complete all YSQ questions before moving to the SMI section.",
                             easyClose = TRUE))
     }
     if (input$tabs == "report" && (!ysq_completed() || !smi_completed())) {
       updateTabItems(session, "tabs", ifelse(!ysq_completed(), "ysq", "smi"))
-      showModal(modalDialog("Please complete all questionnaires before downloading the report.",
+    showModal(modalDialog("Please complete all questionnaires before downloading the report.",
                             easyClose = TRUE))
     }
-  })
+    })
 
   observeEvent(input$next_ysq, {
     qlist <- ysq_questions()

@@ -1,0 +1,45 @@
+---
+title: "Schema Therapy Intake Shiny App Report"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Schema Therapy Intake Shiny App Report}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(intakegui)
+```
+
+# Introduction
+
+This vignette documents the Schema Therapy Intake Shiny App, part of the 
+"intakegui" R package. The app allows service-users to complete the latest 
+versions of the Young Schema Questionnaire (YSQ), the Schema Mode Inventory (SMI), 
+and the Schema Coping Inventory (SCI). Moreover, it automatically generates both 
+CSV and PDF reports summarizing responses and scores, which allow the patient to
+get an overview of the schema concepts and of their own scores before the session
+with their therapist in which these concepts will be discussed.
+
+# Features of the App
+
+The application consists of four main tabs: Young Schema Questionnaire (YSQ),
+Schema Mode Inventory (SMI), Schema Coping Inventory, and Download Report. Users 
+must complete all questions of the first questionnaire before accessing the 
+following one, and all questionnaires must be fully completed before downloading 
+a report. The UI is built using "shinydashboard" and enhanced with "shinyjs" for 
+interactivity.
+
+# How the App Works
+
+The app is a standard **Shiny application**, composed of a `ui` and `server` component.
+
+```{r eval=FALSE}
+shiny::runApp(system.file("shiny-app", package = "intakegui"))
