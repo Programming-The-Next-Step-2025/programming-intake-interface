@@ -106,7 +106,7 @@ ysq_items <- list(
                                 situations, I'll make the wrong decision.",
                                 "I screw up everything I try, even outside of
                                 work (or school)."),
-  "Vulneraibility to Harm" = c("I worry about becoming a street person or vagrant.",
+  "Vulnerability to Harm" = c("I worry about becoming a street person or vagrant.",
                                "I feel that a disaster (natural, criminal,
                                financial, or medical) could strike at any moment.",
                                "I can't seem to escape the feeling that something
@@ -155,7 +155,7 @@ ysq_items <- list(
                     want something from other people.',
                     "I feel that what I have to offer is of greater value than
                     the contributions of others."),
-  "Insufficient Self-control" = c("13.	Often I allow myself to carry through on
+  "Insufficient Self-Control" = c("Often I allow myself to carry through on
                                   impulses and express emotions that get me into
                                   trouble or hurt other people.",
                                   "If I can't reach a goal, I become easily
@@ -188,7 +188,7 @@ ysq_items <- list(
                     reject me.",
                     "I've always let others make choices for me, so I really
                     don't know what I want for myself."),
-  "Self-sacrifice" = c("No matter how much I give, I feel it’s never enough.",
+  "Self-Sacrifice" = c("No matter how much I give, I feel it’s never enough.",
                        "I’m a good person because I think of others more than of
                       myself.",
                        "I give more to other people than I get back in return.",
@@ -276,7 +276,7 @@ ysq_items <- list(
                              always go wrong.",
                              "I often obsess over minor decisions, because the
                              consequences of making a mistake seem so serious."),
-  "Punitiveness (Self)" = c("There’s no excuse if I make a mistake.",
+  "Internal Punitiveness" = c("There’s no excuse if I make a mistake.",
                             "I’m a bad person who deserves to be punished.",
                             "I often have a sense of self-disgust.",
                             "If I make a mistake, I deserve to be punished.",
@@ -288,7 +288,7 @@ ysq_items <- list(
                             consequences.",
                             "When something goes wrong, it’s my fault.",
                             "I should be punished for my mistakes and imperfections."),
-  "Punitiveness (Other)" = c("Most of the time, I don’t accept the excuses
+  "External Punitiveness" = c("Most of the time, I don’t accept the excuses
                              other people make. They’re just not willing to
                              accept responsibility and pay the consequences.",
                              "Others should be punished for their mistakes and imperfections.",
@@ -498,7 +498,7 @@ smi_items <- list(
                            with other people. ",
                            "I avoid difficult decisions. ",
                            "I avoid difficult situations as much as I can. "),
-  "Self-aggrandizer" = c("I can’t settle for second best. ",
+  "Self-Aggrandizer" = c("I can’t settle for second best. ",
                          "I must do what I want to do, regardless of other
                          people’s needs and feelings. ",
                          "I have to be special and better than other people. ",
@@ -516,7 +516,7 @@ smi_items <- list(
                          "I decide I don’t have to follow the same rules as
                          other people. ",
                          "Other people should just do what I tell them. "),
-  "Perfectionistic Over-controller" = c("I spend a lot of time checking, to make
+  "Perfectionistic Over-Controller" = c("I spend a lot of time checking, to make
                                         sure nothing goes wrong.",
                                         "I don’t like surprises.  ",
                                         "In case of uncertainty, I must check. ",
@@ -534,7 +534,7 @@ smi_items <- list(
                                         "I try hard to order my life (e.g.,
                                         organizing, planning, having structure
                                         and routine)."),
-  "Suspicious Over-controller" = c("If people get too close to me or intrude into
+  "Suspicious Over-Controller" = c("If people get too close to me or intrude into
                                    my life, I keep them at a distance.",
                                    "I stay one step ahead to prevent others from
                                    hurting or taking advantage of me. ",
@@ -550,7 +550,7 @@ smi_items <- list(
                                    people about myself. ",
                                    "I prevent others from taking advantage of me
                                    by being on my guard. "),
-  "Attention- & Approval-Seeker " = c("I like to flirt because it makes me feel
+  "Attention- & Approval-Seeker" = c("I like to flirt because it makes me feel
                                       good.",
                                       "I do things to be the center of attention. ",
                                       "I’m addicted to attention and approval. ",
@@ -754,32 +754,827 @@ smi_items <- list(
                        immediately. ",
                        "If something is important to me, I don’t care about what
                        others feel about it. "),
-  "Grandiose Child"  = c(""),
-  "Slacker/Oblomov"  = c(""),
-  "Winner"  = c(""),
-  "Reassurance Seeker" = c(""),
-  "Funny Protector" = c(""),
-  "Clown" = c(""),
-  "Pollyanna" = c(""),
-  "Pretender" = c(""),
-  "Rebellious Child" = c(""),
-  "Sulking Child" = c(""),
-  "Angry Protector" = c(""),
-  "Conning & Manipulating " = c(""),
-  "Predator" = c(""),
-  "Disregarded Child" = c(""),
-  "Victimized Child" = c(""),
-  "Confused Child" = c(""),
-  "Punitive Lecturer" = c(""),
-  "Overly Self-permissive" = c(""),
-  "Emotional daredevil" = c(""),
-  "Emotional Excessiveness" = c(""),
-  "Daredevil" = c(""),
-  "Hyper-autonomous" = c(""),
-  "Over-merciful" = c(""),
-  "Idealizer" = c("")
+  "Grandiose Child"  = c("I find it hard to praise someone when they do well in
+                         something.",
+                         "What I accomplish is much better than what others
+                         accomplish.",
+                         "My place is to be at the top.",
+                         "If something goes wrong, it’s someone else’s fault.",
+                         "People admire me.",
+                         "It goes without saying that I should be the center of
+                         attention.",
+                         "My insights are way better than those of others.",
+                         "I don’t have to prove I’m better than others - I know
+                         it to be true.",
+                         "I know better than others.",
+                         "I feel more special than others. ",
+                         "I know many important people - that makes me special.",
+                         "I think I’m better than most. "),
+  "Slacker/Oblomov"  = c("I don’t like to push myself. ",
+                         "It’s better not to try than to fail after trying.  ",
+                         "I feel that the return from working hard isn’t worth
+                         the effort put in. ",
+                         "Near enough is good enough. ",
+                         "I prefer to relax than get things done. ",
+                         "I feel unmotivated to go forward. ",
+                         "I don’t have to achieve anything. ",
+                         "I’m very content not having much to do. ",
+                         "I prefer minimum effort to working hard and doing well. ",
+                         "Hard work is highly overrated - I like to do as little
+                         as possible.",
+                         "If something isn’t my responsibility, I’m not going to
+                         bother. "),
+  "Winner"  = c("If I don’t win, it’s due to bad luck or an unfair system. ",
+                "When someone tries to criticize me, they’re wrong. ",
+                "I turn everything into a competition to prove myself. ",
+                "If I lose, I challenge others to play the same game/activity
+                again. ",
+                "I’m addicted to winning. ",
+                "Winning constantly helps others think well of me. ",
+                "I win at almost everything I compete in. ",
+                "I disagree when someone tries to tell me I’ve failed. ",
+                "I love competition.",
+                "I need to win at all costs. ",
+                "If I lose, I change the rules so that it would advantage me and
+                increase my chance to win the next round."),
+  "Reassurance Seeker" = c("If I’m uncertain, I press other people into
+                           reassuring me.",
+                           "I deal with frightening feelings by seeking
+                           reassurance from others. ",
+                           "I seek reassurance from others that they care for me.",
+                           "If I feel that something is wrong in my body, I need
+                           to get advice from others. ",
+                           "It’s important to me that others approve of me. ",
+                           "I’m not able to be at peace until I get adequate
+                           reassurance from someone who’s important to me. ",
+                           "If I feel sick, I need reassurance that I’m OK. ",
+                           "What I think about myself isn’t as important as what
+                           others think about me. ",
+                           "I get extremely affected by what others think of me. ",
+                           "Other people get irritated with me for seeking
+                           constant reassurance. "),
+  "Funny Protector" = c("When things become uncomfortable, sad, or distressing,
+                        I laugh to avoid these negative feelings.",
+                        "In difficult situations, I joke about my misfortunes to
+                        divert myself from unpleasant feelings.",
+                        "Bad things happen in life, but it’s better to make fun
+                        about it than to pay attention to it.",
+                        "When I’m around others and painful topics arise, I try
+                        to make light of the situation or joke about it, so I
+                        can distract from any difficult feelings I’m experiencing.",
+                        "I laugh at the bad sides of life to avoid thinking about
+                        it.",
+                        "When I'm feeling bad, laughing helps me to escape from
+                        it. ",
+                        "When I experience negative feelings, I make jokes to
+                        reduce them.",
+                        "Rather than expressing my feelings I make jokes or
+                        highlight ‘the funny side’."),
+  "Clown" = c("I find myself laughing at things that are actually ‘painful’.",
+              "I find myself making a joke when people ask about my feelings.",
+              "By taking the role of a comedian I can deal with any difficult
+              situation.",
+              "I behave like a comedian to completely change perspectives of
+              painful issues.",
+              "If something difficult or awkward pops up I immediately deal with
+              it by switching into a comedian. ",
+              "I don’t suffer from any difficult emotions, rather I make fun of
+              them. ",
+              "I behave like a clown, so I don’t feel any problem. ",
+              "At the moment a situation might become painful for me, I
+              immediately ridicule it.",
+              "I can’t be hurt because I only see the funny and absurd aspects
+              of everything.",
+              "I behave like a clown even when the situation is painful.",
+              "By making fun I’m able to be invulnerable for any inner pain.",
+              "As soon as I start to feel something painful, I make fun of the
+              situation so that I don’t feel it anymore. "),
+  "Pollyanna/Over-Optimist" = c("One should stay optimistic no matter what.",
+                  "I find the silver lining in every situation.",
+                  "I only look at the bright side of life.",
+                  "I’m extremely happy and upbeat. ",
+                  "It’s useless to look at the negative, every situation is
+                  hopeful.",
+                  "I solve difficult issues through focusing on the positive.",
+                  "I come across as gushing in my attempts to keep things positive.",
+                  "There’s no place for negative feelings in my life, only for
+                  positive ones. ",
+                  "Optimism is a duty.",
+                  "Everything happens for a good reason; everything will turn
+                  out great.",
+                  "When others find that things get tough, I remain cheerful and
+                  highly optimistic."),
+  "Pretender" = c("I fully understand the world.  ",
+                  "I don’t experience the slightest doubt. ",
+                  "I fully comprehend who I am. ",
+                  "I’m quickly able to make sense of things in the world.",
+                  "I’m an entirely complete, integrated person. ",
+                  "I’m completely sure of my case.",
+                  "I understand exactly how the world works.",
+                  "I have everything completely in order. ",
+                  "The fact that I see through everything makes me super relaxed. ",
+                  "Everything in the world makes perfect sense to me.",
+                  "Everything that happens in life, I fully comprehend. ",
+                  "I understand myself completely. ",
+                  "I completely understand how other people are. ",
+                  "I can handle the problems I encounter perfectly. ",
+                  "I have a complete understanding of who I am and what I want
+                  from life. ",
+                  "I don’t experience conflicting feelings about anything. ",
+                  "Whatever happens, I can grasp and deal with it. ",
+                  "My life goals are completely clear to me. ",
+                  "I know exactly what I want in my life. ",
+                  "What others say doesn’t upset me. ",
+                  "I’m quickly able to make perfect sense of things happening
+                  around me. "),
+  "Rebellious Child" = c("In protest I do things that are forbidden.  ",
+                         "I do the opposite of what’s expected of me to show my
+                         anger.  ",
+                         "I refuse to follow rules out of protest. ",
+                         "I rise up against people who don’t acknowledge my needs.",
+                         "I do things that are forbidden as a protest.  ",
+                         "People don't care about me, so I don't behave myself.",
+                         "When I feel I’m not taken seriously, I rebel against
+                         others. ",
+                         "People don't care about me, so I don't treat them with
+                         respect.",
+                         "I oppose authorities, such as bosses, teachers, etc.",
+                         "I do things I’m not supposed to do to prove I’m my own
+                         boss.  ",
+                         "When I feel overlooked, I act rebelliously. ",
+                         "Others say I’m difficult because I’m a rebel.",
+                         "I intentionally perform poorly when people ask too much
+                         of me. ",
+                         "I rebel against rules by not obeying them. "),
+  "Sulking Child" = c("I get grouchy when others criticize me.",
+                      "I get cranky when I don’t get the approval I need. ",
+                      "I get cross when things don’t go my way. ",
+                      "When I’m not allowed to do what I want, I angrily withdraw.",
+                      "When I’m not allowed to express my opinions, I get grumpy.",
+                      "I show my irritation to other people by not talking to them.",
+                      "I get in a mood when people don’t respect my independence. ",
+                      "I get moody when others don’t allow me to do things my way. ",
+                      "When others accuse or punish me, I get moody.",
+                      "When people demand too much from me, I get grumpy. ",
+                      "I get grumpy when my needs are ignored. ",
+                      "When I feel constrained, I sulk. ",
+                      "When people are unfair to me, I protest by ignoring them.",
+                      "I angrily withdraw when I don’t receive the attention I
+                      need."),
+  "Angry Protector" = c("When others get close, I use sarcasm that might hurt
+                        their feelings.",
+                        "When I feel vulnerable, I chase people away.",
+                        "My hostile gaze and body language keep people at a safe
+                        distance.",
+                        "I intentionally use anger to give people the message
+                        “stay away from me”.",
+                        "I create a ‘wall of anger’ that keeps people at a distance. ",
+                        "People know to back off just by how I look at them.",
+                        "When a conversation might make me emotional, I push
+                        people away.",
+                        "Emotional closeness is painful for me, so I push people
+                        away.",
+                        "When things get too personal, I become negative and
+                        cynical.",
+                        "When people become emotionally close to me, I warn them
+                        to stay away.",
+                        "I keep people at a safe distance through controlled
+                        displays of anger.",
+                        "My hostility towards others keeps me safe."),
+  "Conning & Manipulating" = c("I manipulate people to achieve my ends.",
+                                "I make up stories about myself to con other
+                                people. ",
+                                "I blackmail people to prevent being abandoned.",
+                                "I use my charm to manipulate. ",
+                                "I get people to trust me so I can take advantage
+                                of them.",
+                                "I only do things to get a favor in return.",
+                                "If people are stupid enough to be conned by me,
+                                it’s their own fault.",
+                                "I pretend to like people to get them to do
+                                things for me.",
+                                "I use people’s weak points to my advantage.",
+                                "I use people’s secrets against them to get what
+                                I want.",
+                                "People only have themselves to blame if I take
+                                advantage of them.",
+                                "I tell lies to escape from punishment.",
+                                "I’m good at manipulating people to get what I
+                                want. ",
+                                "I con and manipulate people to stop them leaving
+                                me.",
+                                "The world is unfair, so I am too.  ",
+                                "I get things done by taking on a false identity."),
+  "Predator" = c("I feel like killing a rival without feeling any remorse.",
+                 "I make plans to get rid of people who get in my way.",
+                 "I ruthlessly get rid of my enemies.",
+                 "I hurt others to make a point. ",
+                 "I wait for the right time to take revenge.",
+                 "When people threaten me, I eliminate them.",
+                 "I don’t mind hurting others badly to reach my goals. ",
+                 "People who oppose me pay a heavy price.",
+                 "I don’t feel sorry for others when I hurt them, nor for their
+                 loved ones.",
+                 "I need to hurt others, which is their own fault. ",
+                 "I don’t mind hurting someone to get what I want.",
+                 "I coldly manipulate others to dominate and control them.",
+                 "I don’t feel bad hurting someone when they stand in my way. "),
+  "Disregarded Child" = c("I feel insignificant.",
+                          "Even when I have people around me, I feel lonely.",
+                          "I feel nobody is paying attention to me.",
+                          "Nobody cares what happens to me.",
+                          "I’m ashamed of who I am.",
+                          "I feel alone in the world.",
+                          "I feel ignored. ",
+                          "I feel that nobody cares about me because of who I am.",
+                          "I’m not worthy of being loved.",
+                          "I’m afraid that people I care about will leave me or
+                          die.",
+                          "I feel like I don’t fit in any group.",
+                          "I feel inadequate as a person.",
+                          "I don’t feel understood by anybody."),
+  "Victimized Child" = c("No matter what I do, I won’t get rewarded.",
+                         "The world is unfair to those like me.",
+                         "I feel that life is basically unfair for those like me.",
+                         "When something goes wrong, I get blamed.",
+                         "I receive bad treatment that I don’t deserve.",
+                         "People who do bad things don’t get punished.",
+                         "I feel those who have authority over me are basically
+                         unfair.",
+                         "I deeply know that I won’t be treated fairly. ",
+                         "Things that happen to me that look like bad luck are
+                         in fact intentional.",
+                         "I feel like a victim of society.",
+                         "I feel that I get treated worse than others.",
+                         "Other people can’t even imagine how badly I’ve been
+                         treated in my life.",
+                         "I feel that I will end up being abused or punished no
+                         matter what I do."),
+  "Confused Child" = c("I don’t understand who I really am.",
+                       "I experience my thoughts and feelings as chaotic.",
+                       "I’m confused about my feelings.",
+                       "I don’t know who I am.",
+                       "Feelings and behaviors of other people don’t make sense
+                       to me.",
+                       "I don’t understand why I react so strongly to certain
+                       things.",
+                       "I feel that life is confusing to me.",
+                       "I don’t recognize myself.",
+                       "Things seem to happen for no reason.",
+                       "My sense of who I am is unstable.",
+                       "I think that life is chaotic to me.",
+                       "I can’t make sense of what happens in the world around me. ",
+                       "Things that happen to me don’t make sense."),
+  "Punitive Lecturer" = c("I confront other people with their shortcomings.",
+                          "I reprimand other people for their mistakes.",
+                          "I believe that punishment is the best way to correct
+                          other people.",
+                          "When other people behave badly, I teach them a lesson. ",
+                          "I lecture other people when they behave inappropriately.",
+                          "When people cross a line, I harshly let them know
+                          about it. ",
+                          "Other people should pay for their faults.",
+                          "When I see other people’s failings, I lecture them.",
+                          "When people make mistakes, I want to teach them a
+                          lesson.",
+                          "I’m convinced that people who misbehave should be
+                          punished.",
+                          "I punish others for their flaws.",
+                          "I tell other people they are bad when they behaved
+                          immorally."),
+  "Overly Self-Permissive" = c("It’s better to forgive myself than to consider
+                               that what I did might have been wrong. ",
+                               "No matter how wrong my actions were, I feel only
+                               kindness and forgiveness for myself. ",
+                               "What I did wrong was no big deal.",
+                               "I shouldn’t blame myself for anything.",
+                               "If people blame me for something, they don’t
+                               understand the context.",
+                               "I accept all my behaviors completely, including
+                               those that are considered unethical.",
+                               "I don’t allow myself to have any feelings of
+                               guilt, only acceptance of what I did.",
+                               "There’s no reason to dwell on how I might have
+                               hurt other people’s feelings.",
+                               "It makes no sense to feel guilty about what I did.",
+                               "I easily forgive myself.",
+                               "I don’t blame myself in the slightest, no matter
+                               what I did.",
+                               "When people tell me I’ve done wrong they don’t
+                               understand the whole story. ",
+                               "I don’t feel ashamed of myself, even when other
+                               people feel hurt by my doings."),
+  "Emotional Daredevil" = c("I long for extreme emotions.",
+                            "I experience all my emotions to the max.",
+                            "I have the urge to experience extreme emotions. ",
+                            "I like having extreme emotions.",
+                            "No matter how strong the emotion, I love it.",
+                            "It’s exciting to let my emotions go.",
+                            "I believe the more emotions the better.",
+                            "I crave intense emotions.",
+                            "I strive for intense feelings.",
+                            "I prefer to be in intense emotional situations. ",
+                            "I enjoy experiencing powerful emotions."),
+  "Emotional Excessiveness" = c("I’m proud how intensely I express my emotions.",
+                                "No matter how strong the emotion is, I blatantly
+                                let it out.",
+                                "I feel no shame in expressing my intense emotions. ",
+                                "Regardless of the situation, I have no problems
+                                with sharing my emotions.",
+                                "It’s good to freely express my feelings.",
+                                "I vent my emotions without restriction.",
+                                "No matter the situation, it’s appropriate to
+                                show my feelings.",
+                                "I don’t need to withhold my emotional expressions.",
+                                "I don’t care about how other people feel about
+                                me expressing my emotions.",
+                                "I don’t find it embarrassing to express all my
+                                emotions. "),
+  "Daredevil/Over-Risk-Taking" = c("Other people tell me that I do daring things.",
+                  "I feel confident when I push myself to my limits. ",
+                  "It’s important to me to face the risks in life daringly. ",
+                  "I feel invincible in the face of adversity. ",
+                  "I behave as if disasters can’t strike me.",
+                  "Successfully managing dangerous situations makes me feel strong.",
+                  "For me, it’s a weakness to experience vulnerability and fear. ",
+                  "I’m not at all afraid of taking risks. ",
+                  "Facing danger makes me feel strong. ",
+                  "I’m certain I can handle any dangerous situation. ",
+                  "I do dangerous things just to prove that nothing bad can
+                  happen to me. ",
+                  "I don’t hesitate to take on dangers. ",
+                  "I enjoy taking risks. ",
+                  "I think playing it safe is a waste of time. ",
+                  "People tell me that I challenge fate. "),
+  "Hyper-Autonomous" = c("It’s a bad idea to rely on other people for emotional
+                         support. ",
+                         "I hate it when people tell me what to do.",
+                         "The only person I can rely on is myself.",
+                         "I don’t need help or advice when it comes to dealing
+                         with my problems.",
+                         "Relying on other people frustrates me. ",
+                         "I see it as a weakness to depend on other people. ",
+                         "Others or society shouldn’t dictate what I should do.",
+                         "I don’t like it when people assume I need help.",
+                         "I work best on my own.",
+                         "I don’t enjoy sharing my problems with others e.g.
+                         family, partners.",
+                         "It’s important to be independent.",
+                         "I see others as getting in my way even when they try
+                         to help.",
+                         "I can’t understand how some people allow themselves to
+                         be influenced by others.",
+                         "When I take decisions that make others angry it doesn’t
+                         bother me.",
+                         "I carve my own path in life no matter what significant
+                         others say."),
+  "Over-Merciful" = c("I’m forgiving and kind to others, even those who mistreat
+                      me. ",
+                      "Regardless of the situation, I remain a warm and caring
+                      person.",
+                      "I instantly forgive everyone because all humans make
+                      mistakes.",
+                      "To me it’s natural to forgive others.",
+                      "I only feel kindness towards others.",
+                      "I immediately forgive others when I’m harmed through their
+                      actions.",
+                      "I’m forgiving and kind to others no matter their mistakes.",
+                      "It’s important to me to be kind even to those who hurt me
+                      or make me suffer.",
+                      "I’m patient with other people, no matter how irritating
+                      they are.",
+                      "I excuse people for the bad things they have done.",
+                      "I put a lot of effort into being kind to others even if
+                      they are unfriendly.",
+                      "I’m merciful to others no matter what they do."),
+  "Idealizer" = c("Even though people might say I’m naïve, I trust others entirely.",
+                  "I fully believe in a righteous world.",
+                  "I don’t see flaws in the people I care about.",
+                  "I easily feel safely connected to others.",
+                  "Everything happens for an ultimately good and fair reason.",
+                  "If my partner treats me badly, I assume it’s a onetime thing.",
+                  "People I care about won’t let me down.",
+                  "I trust that all people around me are honest and fair.",
+                  "People tell me that I see other people and the world through
+                  rose-colored glasses.",
+                  "I have an ideal relationship with my best friend/partner.",
+                  "The world is a fair and safe place.",
+                  "I have complete trust in the people I care about; I know they
+                  won’t intentionally hurt me.",
+                  "My best friend/partner does only the good.",
+                  "I trust people unconditionally, which feels good. ")
 )
 
 sci_items <- list(
+  "Resignation" = c("It’s hard to let go of certain beliefs even if I can see
+                    they might not be helpful. ",
+                    "I have thoughts about myself that easily overwhelm me. ",
+                    "I have certain personal beliefs that feel completely true,
+                    even though I somehow know that they may not be. ",
+                    "I’m easily dominated by my feelings.  ",
+                    "When certain thoughts surface, I find it difficult to see
+                    things in a different way. ",
+                    "I let myself get carried away by certain beliefs I have
+                    about myself. ",
+                    "I have beliefs about others that have a strong grip on me.",
+                    "I have beliefs that stick with me, although it would be
+                    better to let them go. ",
+                    "I’m unable to ignore certain thoughts about myself, even
+                    when I know they might be incorrect.  ",
+                    "Some feelings tend to overwhelm me when they arise.  ",
+                    "I can get swept away by my ideas about others.   ",
+                    "When something upsets me, I have a hard time shaking off
+                    these feelings.  ",
+                    "I have strong feelings I give into and allow to take over."),
+  "Avoidance" = c("I switch off my feelings as much as possible. ",
+                  "I keep negative ideas out of my mind. ",
+                  "I prefer to avoid facing my own emotional problems. ",
+                  "I shut off uncomfortable feelings. ",
+                  "I don’t reflect on difficult personal issues. ",
+                  "I’d rather feel nothing than experience disturbing emotions.",
+                  "I avoid thinking about upsetting ideas.",
+                  "I mentally detach from unwanted thoughts and feelings.",
+                  "I deal with difficult personal feelings by avoiding thinking
+                  about them.",
+                  "I avoid thinking about unwanted ideas. ",
+                  "I postpone thinking about emotional issues."),
+  "Inversion" = c("When I start to experience undesirable thoughts and feelings,
+                  I turn them into desirable ones. ",
+                  "As soon as I start to feel an unwanted emotion, I almost
+                  immediately start feeling the opposite. ",
+                  "When a belief I dislike arises, I convince myself that the
+                  contrary is true. ",
+                  "When I have unwanted thoughts about myself, I change them to
+                  the contrary. ",
+                  "If I have negative personal beliefs and feelings, I switch
+                  them into something more positive. ",
+                  "I notice that when I get a strong negative feeling, it almost
+                  immediately turns into a more positive feeling. ",
+                  "I have the urge to hide any negative personal characteristic
+                  I may have and show the opposite is true.",
+                  "I can convince myself of the positive, no matter what negative
+                  ideas and feelings arise.  ",
+                  "I tend to deal with certain thoughts and feelings about myself
+                  and others by convincing myself of the opposite.  ",
+                  "I manage unwanted thoughts by believing the opposite.  ",
+                  "As soon as a negative aspect of myself might be revealed, I
+                  feel the urge to prove the opposite is true.  ",
+                  "When I start to have a strong negative feeling, I can turn it
+                  into a more positive feeling. ")
+)
 
+schemas_descriptions <- list(
+  "Emotional Deprivation" = paste("You expect that others will not or
+  insufficiently meet your basic emotional needs, such as care, empathy,
+  affection, protection,
+ guidance and care."),
+
+  "Abandonment" = "You expect to soon lose everyone with whom you have
+  an emotional connection. You believe that eventually all intimate relationships
+  will end. You perceive significant others as unreliable and unpredictable in
+  their support and commitment. ",
+
+  "Mistrust/Abuse" = "You expect that others will eventually take advantage of
+  you in some way and that others will intentionally hurt, cheat, or put you
+  down.",
+
+  "Social Isolation" = "You believe that you are isolated from the rest of the
+  world, that you are fundamentally different from other people and that you don't
+  belong anywhere.",
+
+  "Defectiveness/Shame" = "You believe that you are internally imperfect. As
+  soon as others get to know you better, this will be noticed, and the
+  relationship will be broken. You often have a strong sense of shame.",
+
+  "Failure" = "You feel that you are not able to perform at the level of your peers
+  in areas such as work, education, or sports. You often feel stupid, untalented,
+  or ignorant. You often don't even try to achieve anything anymore; it won't work
+  anyway.",
+
+  "Dependence/Incompetence" = "You feel unable to handle day-to-day
+  responsibilities properly and independently. You often feel extremely dependent
+  on others in situations where decisions must be made or something new has to be
+  undertaken.",
+
+  "Vulnerability to Harm" = paste("You expect something horrible to happen to you at
+  any moment. This may lead you to take elaborate measures to protect yourself."),
+
+  "Enmeshment" = "You believe that you lack identity or inner direction. You
+  often feel empty, aimless, and emotionally dependent on others.",
+
+  "Entitlement" = "You believe you should be able to do, say or get anything you
+  want immediately without regard to the eff ect it will have on others. You are
+  not interested in what others need.",
+
+  "Insufficient Self-Control" = "You believe that you have little tolerance for
+  frustration and that you are unable to contain feelings or impulses. When this
+  lack of self-control is extreme, it can lead to chaotic administration (e.g.,
+  not opening mails/letters), payment delays, sloppy household (e.g.,not being
+  able to find things), criminal behaviour or addiction etc.",
+
+  "Subjugation" = "You think you must surrender to the will of others to avoid
+  negative consequences. You fear that, without this compliance, others will
+  become angry. You have the impression that your wishes, opinions, and feelings
+  do not matter to others.",
+
+  "Self-Sacrifice" = "You often find yourself sacrificing your own needs or wants
+  to help others. Paying attention to your own needs makes you feel guilty. You
+  gain self-esteem by helping others.",
+
+  "Approval-Seeking" = "You place great emphasis on gaining the approval,
+  recognition, or attention of others or on fitting in. Th is often leads to
+  unsatisfactory life decisions or to a hypersensitivity to rejection.",
+
+  "Unrelenting Standards" = "You believe that what you do will never be good
+  enough, that you have to try harder, and/or you place an extreme emphasis on
+  status, wealth, or power. This is often at the expense of your health,
+  happiness or your relationships with family and friends.",
+
+  "Emotional Constriction" = "You feel you need to hold back emotions andimpulses,
+  especially anger. You are not very spontaneous, and you are usually seen as
+  emotionally constrained.",
+
+  "Fear of Losing Control" = "You are overly concerned about losing control of
+  your emotional expressions. You believe there will be serious consequences
+  if you fail to control your emotions and behaviours.",
+
+  "Negativity/Pessimism" = "You have an all-pervasive, lifelong focus on the
+  negative aspects of life (pain, death, loss, disappointment, guilt, resentment,
+  betrayal, etc.), while downplaying or overlooking positive oroptimistic aspects.",
+
+  "Internal Punitiveness" = "You believe that you should be severely punished for
+  your mistakes. You tend to be angry, intolerant, punitive, and impatient with
+  yourself if you don't live up to your expectations orstandards. You have
+  trouble forgiving yourself for mistakes.",
+
+  "External Punitiveness" = "You believe that people should be severely punished
+  for their mistakes. You tend to be angry, intolerant, punitive, and impatient
+  with people who don't live up to your expectations or standards. You have
+  trouble forgiving others for mistakes.",
+
+  "Unfairness" = "You believe that the world (including also other people) is
+  unfair and unjust and that society fails to address the actions of those who
+  behave unfairly. You think of yourself as a (continuous) victim of unfairness.",
+
+  "Incoherent Identity" = "You see yourself as lacking coherence and unity,
+  often feeling like you consist of fragmented and unconnected parts. You struggle
+  to maintain a clear sense of self and find it hard to understandyour own needs,
+  emotions, thoughts, and actions.",
+
+  "Incomprehensible World" = "You believe that the world, which includes other
+  people and society at large, lacks inherent meaning. You see yourself as
+  disconnected from what is happening in this world. The outer world is confusing
+  to you, and you struggle to comprehend its underlying functions."
+)
+
+modes_descriptions <- list(
+  "Lonely Child" = "You feel like a lonely child not being taken care of by
+  significant others. Because the most important emotional needs of the child
+  have generally not been met, you usually feel empty, alone, socially unacceptable,
+  undeserving of love, unloved and unlovable.",
+
+  "Abandoned & Abused Child" = "You feel the enormous emotional pain and fear of
+  abandonment. You have the affect of a lost child: sad, frightened, vulnerable,
+  defenseless, hopeless, needy, victimized, worthless, and lost. You appear
+  fragile and childlike. You feel helpless and utterly alone and are obsessed
+  with finding a parent figure who will take care of you.",
+
+  "Disregarded Child" = "You feel disregarded in core emotional needs, such as
+  safety, trust, and nurturance. You believe that your emotional needs are not
+  seen by others, or, if seen, will not be met by others. You often feel the
+  pain created by this. Usually, this is rooted in early experiences of caregivers
+  not fulfilling core emotional needs, such as caring for and protecting the child.",
+
+  "Dependent Child" = "You feel incapable and overwhelmed by adult
+  responsibilities. You show a strong tendency to act in a younger or needier
+  way, and you have a distinct need to be taken care of.",
+
+  "Non-autonomous Child" = "You feel that you are not being able to develop and
+  express your own opinions and preferences, feel incompetent and unable to rely
+  on your own insight and choices, and to deal with thechallenges of adulthood.",
+
+  "Subordinate Child" = "You don't feel the freedom to express opinions and
+  emotions, rather you feel the necessity to subordinate yourself to others.",
+
+  "Constrained Child" = "You don't feel the freedom to be spontaneous and playful,
+  instead you behave in a controlled, inhibited, and serious way, even when this
+  is not functional.",
+
+  "Victimized Child" = "You continuously feel victimized and unfairly treated.
+  Events are experienced as further evidence of injustice. You have difficulty
+  experiencing bad luck as non-intentional.",
+
+  "Confused Child" = "You experience the self as incoherent, chaotic, and falling
+  apart. This might create feelings of anxiety, being lost, confusion, or
+  emptiness.",
+
+  "Spoiled Child" = "You think that you are entitled to get or to do whatever you
+  want. You don't like and accept frustration as you are convinced you don't
+  deserve it. You don't take 'no' for an answer.",
+
+  "Grandiose Child" = "You believe you are the best in many ways compared to
+  others and deserve maximum levels of admiration by others. You overvalue your
+  ideas and acts and have a feeling of superiority which gives you self-rewarding
+  sensations. You think you are more important than others and find proof in
+  self-identified talents or by reporting relationships with people deemed
+  special/ important.",
+
+  "Impulsive Child" = "You act on desires or impulses in a selfish or uncontrolled
+  way to get your own way and you have difficulty delaying short-term
+  gratification. You often feel intensely angry, furious, livid, or impatient
+  when these impulses cannot be met.",
+
+  "Undisciplined Child" = "You can't force yourself to complete routine or
+  tedious tasks. You are easily frustrated and give up easily.",
+
+  "Angry Child" = "You feel intensely angry, furious, or impatient because basic
+  emotional (or physical) needs are not being met.",
+
+  "Enraged Child" = "You feel intense anger that manifests itself in hurtful or
+  damaging actions towards people or objects. The feelings of anger can no
+  longer be controlled. The behavior is more extreme than that of the angry
+  child, and aggressive actions can result.",
+
+  "Rebellious Child" = "You act in rebellious ways, doing forbidden things as a
+  protest. You refuse to follow rules and don't consider the consequences. The
+  rebellion can be expressed in other ways rather than overt anger. For instance,
+  doing things intentionally poorly, obstruction, etc.",
+
+  "Sulking Child" = "You express anger and protest -in a passive way- against too
+  high demands, excessive punishment, accusations, and/or restrictions, by
+  resistance and conveying disagreement nonverbally (e.g., being silent). You
+  resist tedious, challenging, or frustrating responsibilities due to a lack of
+  self-discipline.",
+
+  "Punitive Critic/Punitive Parent" = "You believe that you deserve punishment or blame.
+  You can't forgive mistakes. You often act on these feelings by blaming, punishing,
+  or abusing yourself (e.g., self-injury).",
+
+  "Punitive Lecturer" = "You believe that others should be held accountable for
+  their failings and imperfections. You have a tendency to denigrate and control
+  others. You lecture and punish others for their flaws and mistakes.",
+
+  "Demanding Critic/Demanding Parent" = "You believe that the 'right' way of life is
+  characterized by perfection, achieving goals at a high level, striving for
+  high status or being efficient and avoiding wasting time. You may find it wrong
+  to spontaneously express feelings or behaviors.",
+
+  "Detached Protector" = "You cut off feelings and needs and emotionally detach
+  from others and reject their help. You feel withdrawn, dazed, distracted, cut
+  off, depersonalized, empty, or bored.",
+
+  "Funny Protector" = "You use jokes to detach from painful emotions.",
+
+  "Avoidant Protector" = "You attempt to keep yourself safe by avoiding
+  situations where painful and vulnerable feelings might be activated.",
+
+  "Angry Protector" = "You use cynical, controlled displays of anger or hostility
+  to keep others at a safe distance and to protect yourself when the closeness
+  of others is perceived as threatening.",
+
+  "Compliant Surrender" = "You behave in a passive, serving, submissive manner
+  around others due to fear of conflict or rejection. You tolerate abuse and/or
+  mistreatment. You don't express healthy needs or desires to others.",
+
+  "Reassurance Seeker" = "You seek reassurance from other people or from external
+  sources (e.g., internet) that nothing bad is going to happen, that a perceived
+  sign is actually a false alarm.",
+
+  "Detached Self-soother" = "You compulsively or excessively pursue distraction,
+  self-soothing, or self-stimulating activities (e.g., substanceabuse, working,
+  sleeping, using the Internet, chatting, exercising, or sexual activity) to avoid
+  or distract from distressing feelings.",
+
+  "Suspicious Over-Controller" = "You try to protect yourself against threat
+  from others. You do this in an extreme way by constantly checking others and
+  their intentions. In that way you seek confirmation of your distrust.",
+
+  "Hyper-Autonomous" = "You assert a false identity of being overly independent
+  and autonomous (i.e., you don't need anybody). You denythe need for connection
+  and approval from (significant) others, ignore societal expectations, are
+  indifferent to others' situations, and/or prioritize personal opinions over the
+  opinions of others.",
+
+  "Perfectionistic Over-Controller" = "You try to protect yourself from making
+  mistakes and prevent misfortune and criticism by being overly perfectionistic
+  (e.g., perfectionism in achievement, outer appearance, social status etc.).
+  To protect yourself from the pain of failure, you try to control every detail
+  in a compulsive way to ensure the best result.",
+
+  "Self-Aggrandizer" = "You behave in a self-centered or self-interested way
+  toget your way, without regard for the feelings of others. You display
+  superior or condescending behavior towards others. You may feel special,
+  privileged, or feel that you deserve better treatment than others. You deny
+  underlying insecurities and weaknesses.",
+
+  "Attention- & Approval-Seeker" = "You try to gain approval and attention from
+  others, by exaggerating your behavior or emotions (e.g.,monopolizing a
+  conversation, being overly garrulous, saying outrageous things) or by displaying
+  inappropriate behavior (e.g., eroticizing). You get easily frustrated with minor
+  criticism, disapproval, or lack of attention.",
+
+  "Pollyanna/Over-Optimist" = "You turn around the underlying pessimism by
+  being overly optimistic. You find something to be glad or hopeful about in
+  every situation, deny possible negative outcomes and use extremely positive
+  language to overshadow your pessimism to a noticeable extent.",
+
+  "Clown" = "You make fun of every situation, even when it’s more appropriate to
+  pay attention to the serious aspects of it. You make jokes, fool around, and
+  behave in funny ways, even transgressing social norms, to accomplish denial of
+  painful or threatening aspects of reality.",
+
+  "Winner" = "You engage in constant competition with everyone around, driven by
+  a compulsive desire to gain as many experiences ofsuccess/winning as possible
+  in every situation. Your competitiveness is fuelled by a need to accumulate
+  victories, to feel better than your opponents.",
+
+  "Slacker/Oblomov" = "You turn around steadfast standards by setting excessively
+  low demands and expectations for yourself. You worship sloth, doing nothing, and
+  loafing.",
+
+  "Over-Humble" = "You perceive yourself as a very ordinary person and
+  consistently adopt an excessively modest and humble attitude. You refuse to
+  acknowledge being above average in any aspect or achievement, even when that
+  is objectively true. You firmly believe that you don't merit recognition for
+  any accomplishment.",
+
+  "Pretender" = "You make yourself believe that you are certain, well-integrated,
+  ordered, contained, and controlled or that the world is meaningful, and that
+  you are in control of it. You pretend to always know exactly who you are and
+  what you want, creating a made-up version ofyourself that doesn't match your
+  true emotional needs.",
+
+  "Over-Merciful" = "You have an excessive capacity for forgiveness and show an
+  extreme sense of compassion, warmth, and kindness towards others regardless of
+  the severity of the situation. This includes extending compassion even to those
+  who mistreat or harm you through their actions.There is no tolerance for blame
+  and guilt, and feelings of retaliation. Revenge is considered unacceptable.",
+
+  "Idealizer" = "You naively believe that others will treat you in a just way,
+  that the world is fair and/or that others will never let you down. You are likely
+  to place particular people on a pedestal and feel excited about the degree of
+  safe connection that you have with this individual. You ignore theharmful
+  effects of others’ behaviors and don't take precautions even when it is necessary.",
+
+  "Daredevil/Over-Risk-Taking" = "You embrace excessive risk-taking behavior and
+  engage in activities that others perceive as too risky or daring. You appear to
+  have no fear and hold the belief that confronting dangers and taking risks
+  contributes to personal strength and resilience.",
+
+  "Overly Self-Permissive" = "You rationalize every act, even when others see it
+  as clearly wrong. You are convinced of your own goodness, the righteousness of
+  your actions, and your good intentions. You can't acknowledge any mistake made
+  or make apologies. You see yourself ashonourable and as having a high degree
+  of integrity.",
+
+  "Emotional Excessiveness" = "You are characterized by an unabashed emotional
+  expression and a tendency to openly share and express emotions, regardless of
+  their emotional valence or intensity, and regardless of the prevailing
+  circumstances.",
+
+  "Emotional Daredevil" = "You are seeking out heightened emotional experience
+  and are constantly striving for emotional stimulation. You firmly believe in
+  your ability to manage any range of emotions, sensations, and stressors, and
+  are compelled to prove this by engaging in emotionally challenging, thrilling,
+  novel, or other emotionally stimulating actions.",
+
+  "Bully & Attack" = "You harm other people in a controlled and strategic manner
+  through emotional, physical, sexual, verbal, antisocial, or criminal acts. This
+  gives a sense of power, dominance, and/or invulnerability, often incorporating
+  sadistic elements.",
+
+  "Conning & Manipulating" = "You con, lie, or manipulate in a manner designed
+  to achieve a specific goal, which either involves victimizing others,
+  controlling others, or escaping punishment. You deny the unfair aspects of your
+  behavior.",
+
+  "Predator" = "You plan and execute severely damaging acts (including murder)
+  against a perceived threat, rival, obstacle, or enemy in a cold, ruthless, and
+  calculated manner.",
+
+  "Happy Child" = "You feel at ease because core emotional
+  needs are currently met. You feel loved, connected, safe, understood, optimistic
+  and spontaneous.",
+
+  "Healthy Adult" = "You perform appropriate adult functions
+  such as working, parenting, taking responsibilities, and making healthy decisions.
+  You are aware of your emotional needs, and seeksuitable ways to fulfil these,
+  while also respecting the interests of others."
+)
+
+coping_descriptions <- list(
+  "Resignation" = "You tend to accept problematic beliefs and feelings as the
+  truth. You act according to these beliefs and feelings, for example by entering
+  relationships or situations that cause negative events to keep repeating
+  themselves.",
+
+  "Avoidance" = "You try to avoid activities, situations, or people that can
+  trigger your negative beliefs and associated feelings such as sadness, shame,
+  or anger. You also try to block negative thoughts, memories andemotions and
+  seek as much distraction as possible.",
+
+  "Inversion" = "You 'fight' against your negative beliefs and feelings by
+  pretending the opposite is true, such as acting superior when you actually feel
+  inferior. You try to appear mentally strong and healthy, denying problematic
+  beliefs and feelings."
 )
