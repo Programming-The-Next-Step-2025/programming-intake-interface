@@ -5,7 +5,7 @@
 run_app <- function() {
   shiny::shinyApp(
     ui = ui_complete(),
-    server = app_server
+    server = server_complete()
   )
 }
 
