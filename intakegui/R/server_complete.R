@@ -1,59 +1,32 @@
-# source("schemas_modes.R")
-
-ui <- shinydashboard::dashboardPage(
-  skin = "red",
-  shinydashboard::dashboardHeader(title = shiny::span("Schema Therapy Assessment")),
-  shinydashboard::dashboardSidebar(
-    width = 300,
-    shinydashboard::sidebarMenu(id = "tabs",
-                                shinydashboard::menuItem("Young Schema Questionnaire", tabName = "ysq", icon = shiny::icon("list")),
-                                shinydashboard::menuItem("Schema Mode Inventory", tabName = "smi", icon = shiny::icon("th")),
-                                shinydashboard::menuItem("Schema Coping Inventory", tabName = "sci", icon = shiny::icon("tasks")),
-                                shinydashboard::menuItem("Download Report", tabName = "report", icon = shiny::icon("download"))
-    )
-  ),
-  shinydashboard::dashboardBody(
-    shinyjs::useShinyjs(),
-    shiny::tags$head(shiny::tags$title("Schema Therapy Assessment")),
-    shinydashboard::tabItems(
-      shinydashboard::tabItem("ysq",
-                              shiny::h3("Young Schema Questionnaire"),
-                              shiny::uiOutput("ysq_questions_ui"),
-                              shiny::fluidRow(
-                                shiny::column(6, shiny::actionButton("prev_ysq", "Previous", class = "btn-lg")),
-                                shiny::column(6, shiny::actionButton("next_ysq", "Next", class = "btn-lg"))
-                              ),
-                              shiny::textOutput("ysq_page_info")
-      ),
-      shinydashboard::tabItem("smi",
-                              shiny::h3("Schema Mode Inventory"),
-                              shiny::uiOutput("smi_questions_ui"),
-                              shiny::fluidRow(
-                                shiny::column(6, shiny::actionButton("prev_smi", "Previous", class = "btn-lg")),
-                                shiny::column(6, shiny::actionButton("next_smi", "Next", class = "btn-lg"))
-                              ),
-                              shiny::textOutput("smi_page_info")
-      ),
-      shinydashboard::tabItem("sci",
-                              shiny::h3("Schema Coping Inventory"),
-                              shiny::uiOutput("sci_questions_ui"),
-                              shiny::fluidRow(
-                                shiny::column(6, shiny::actionButton("prev_sci", "Previous", class = "btn-lg")),
-                                shiny::column(6, shiny::actionButton("next_sci", "Next", class = "btn-lg"))
-                              ),
-                              shiny::textOutput("sci_page_info")
-      ),
-      shinydashboard::tabItem("report",
-                              shiny::h3("Download Your Schema Report"),
-                              shiny::downloadButton("downloadReport", "Download PDF Report"),
-                              shiny::br(), shiny::br(),
-                              shiny::downloadButton("downloadResponses", "Download CSV Responses")
-      )
-    )
-  )
-)
-
-server <- function(input, output, session) {
+#' The server function :
+#' - Initializes and shuffles questions from YSQ, SMI, and SCI.
+#' - Shows a page of questions with answer options and handles switching between
+#' pages.
+#' - Checks that all questions on the page are answered before moving to the
+#' next section.
+#' - Calculates average scores for each schema, mode, and coping style.
+#' - Allows to download the report in .pdf and the responses in .csv.
+#'
+#' @param input Shiny input object
+#' @param output Shiny output object
+#' @param session Shiny session object
+#'
+#' @details
+#' This function expects the following global variables to be available:
+#' - ysq_items, smi_items, sci_items: Lists of questions
+#' - schemas_descriptions, modes_descriptions, coping_descriptions: Description
+#' text for each category.
+#'
+#' It creates internal reactive values for:
+#' - Shuffled questions: ysq_questions, smi_questions, sci_questions.
+#' - Page numbers for navigation: ysq_page, smi_page, sci_page.
+#'
+#' Also defines helper functions to:
+#' - Show questions on the screen,
+#' - Check that all questions are answered before moving to the next section.
+#'
+#' @export
+server_complete <- function(input, output, session) {
   per_page <- 10
 
   ysq_questions <- shiny::reactiveVal()
@@ -276,5 +249,3 @@ server <- function(input, output, session) {
     }
   )
 }
-
-shiny::shinyApp(ui, server)

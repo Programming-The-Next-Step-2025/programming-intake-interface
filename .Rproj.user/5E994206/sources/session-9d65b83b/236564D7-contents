@@ -1,0 +1,51 @@
+#
+# This is a Shiny web application. You can run the application by clicking
+# the 'Run App' button above.
+#
+# Find out more about building applications with Shiny here:
+#
+#    https://shiny.posit.co/
+#
+
+library(shiny)
+library(bslib)
+
+ui <- page_sidebar(
+  title = "title panel",
+  sidebar = sidebar("sidebar"),
+  "main contents"
+)
+
+server <- function(input, output) {
+
+   }
+
+shinyApp(ui = ui, server = server)
+
+#' Add two numbers
+#' @param a
+#' @param b
+#' @details adds a to b.
+add_a_and_b <- function(a, b) {
+  a + b
+}
+
+#install.packages("roxygen2")
+roxygen2::roxygenize
+library(roxygen2)
+
+install.packages("intakegui")
+# check working directory
+getwd()
+# check if the package is installed
+library(intakegui)
+
+?add_a_and_b
+
+install.packages("devtools")
+devtools::document()
+devtools::install("intakegui")
+library(intakegui)
+?add_a_and_b
+
+

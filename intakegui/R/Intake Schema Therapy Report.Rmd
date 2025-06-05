@@ -1,0 +1,89 @@
+---
+title: "Schema Therapy Assessment Report"
+output: pdf_document
+params:
+  ysq_scores: !r list()
+  smi_scores: !r list()
+  sci_scores: !r list()
+  schemas_descriptions: !r list()
+  modes_descriptions: !r list()
+  coping_descriptions: !r list()
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+# Schema Therapy Assessment Report
+
+Dear respondent,  
+Thank you for participating in this assessment. This report summarizes your scores across three self-assessment questionnaires:
+
+- **Young Schema Questionnaire (YSQ)**
+- **Schema Mode Inventory (SMI)**
+- **Schema Coping Inventory (SCI)**
+
+These tools aim to offer insight into your beliefs, emotional patterns, and coping styles. High scores may reflect areas of interest for therapy. For each questionnaire it is indicated what the sub-scales mean and what your score is. These tools aim to offer insight into your beliefs, emotional patterns, and coping styles. High scores may reflect areas of interest for your upcoming therapy sessions. You will soon discuss the results with your psychotherapist.
+
+---
+
+## Young Schema Questionnaire (YSQ)
+
+This questionnaire assesses 23 different maladaptive schemas. These are deep-rooted negative beliefs and feelings about oneself and others, such as "No one can be trusted", that often originate in childhood. When a maladaptive schema is strong, your behavior is driven by it, whichusually leads to problems. Below is a brief explanation of the schemasand your score is also displayed for each schema.
+
+```{r, results='asis', echo=FALSE}
+ysq <- params$ysq_scores
+desc <- params$schemas_descriptions
+
+for (name in names(ysq)) {
+  cat(paste0("**", name, "**  \n"))
+  cat(paste0("Mean score (1–7): ", round(ysq[[name]], 2), "  \n"))
+  if (!is.null(desc[[name]])) {
+    desc_clean <- gsub("\n", " ", desc[[name]])
+    desc_clean <- gsub("Your mean score.*?:", "", desc_clean, ignore.case = TRUE)
+    cat(desc_clean, "\n\n")
+  }
+  cat("\n---\n\n")
+}
+
+```
+
+## Schema Coping Inventory 
+People can deal with the pain and sadness caused by the negative beliefsand feelings about themselves and others (i.e., schemas) in different ways. There are roughly three ways that are understandable, but in the long-term not helpful. These three dysfunctional 'ways of coping' are explained in more detail below. The higher your score, the more likely you are to use this way of coping.
+
+```{r, results='asis', echo=FALSE}
+sci <- params$sci_scores
+desc <- params$coping_descriptions
+
+for (name in names(sci)) {
+  cat(paste0("**", name, "**  \n"))
+  cat(paste0("Mean score (1–7): ", round(sci[[name]], 2), "  \n"))
+  if (!is.null(desc[[name]])) {
+    desc_clean <- gsub("\n", " ", desc[[name]])
+    desc_clean <- gsub("Your mean score.*?:", "", desc_clean, ignore.case = TRUE)
+    cat(desc_clean, "\n\n")
+  }
+  cat("\n---\n\n")
+}
+
+```
+
+## Schema Mode Inventory 
+This questionnaire measures 49 diff erent schema modes. A schema mode is a combination of schemas (see Young Schema Questionnaire) and coping styles (see Schema Coping Inventory) that are active in a person at any given time; it's a state of mind. These modes are triggered by life situations and originate in early life experiences. A person can switch from one schema mode to another due to changes in the environment. In this way, schema modes can explain sudden changes in emotions, behavior, and thinking. Below is a brief description of the 49 schema modes with your corresponding score.
+
+```{r, results='asis', echo=FALSE}
+smi <- params$smi_scores
+desc <- params$modes_descriptions
+
+for (name in names(smi)) {
+  cat(paste0("**", name, "**  \n"))
+  cat(paste0("Mean score (1–7): ", round(smi[[name]], 2), "  \n"))
+  if (!is.null(desc[[name]])) {
+    desc_clean <- gsub("\n", " ", desc[[name]])
+    desc_clean <- gsub("Your mean score.*?:", "", desc_clean, ignore.case = TRUE)
+    cat(desc_clean, "\n\n")
+  }
+  cat("\n---\n\n")
+}
+```
+
